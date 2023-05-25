@@ -169,20 +169,7 @@
         <div class="author">
         
 
-        Bram Bekker, Olga Kuryatnikova, Fernando Mário De Oliveira Filho, and
-          <span class="more-authors" title="click to view 1 more author" onclick="
-                var element = $(this);
-                element.attr('title', '');
-                var more_authors_text = element.text() == '1 more author' ? 'Juan C Vera' : '1 more author';
-                var cursorPosition = 0;
-                var textAdder = setInterval(function(){
-                  element.text(more_authors_text.substring(0, cursorPosition + 1));
-                  if (++cursorPosition == more_authors_text.length){
-                    clearInterval(textAdder);
-                  }
-              }, '10');
-              ">1 more author</span>
-</div>
+        Bram Bekker, Olga Kuryatnikova, Fernando Mário De Oliveira Filho, and Juan C Vera</div>
 
         <!-- Journal/Book title and date -->
         
@@ -196,14 +183,24 @@
 
           <!-- Links/Buttons -->
           <div class="links">
+            <a href="http://arxiv.org/abs/true" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">arXiv</a>
+            <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
           </div>
           
           <div class="badges">
             <span class="altmetric-embed" data-hide-no-mentions="true" data-hide-less-than="15" data-badge-type="2" data-badge-popover="right" data-doi="2304.05429"></span>
-              <span class="__dimensions_badge_embed__" data-doi="2304.05429" data-hide-zero-citations="true" data-style="small_rectangle" data-legend="hover-right" style="margin-bottom: 3px;"></span>
           </div>
 
-          
+          <!-- Hidden bibtex block -->
+          <div class="bibtex hidden">
+            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@unpublished</span><span class="p">{</span><span class="nl">Bekker2023OptimizationSpaces</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{{Optimization hierarchies for distance-avoiding sets in compact spaces}}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2023}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Bekker, Bram and Kuryatnikova, Olga and Filho, Fernando Mário De Oliveira and Vera, Juan C}</span><span class="p">,</span>
+  <span class="na">url</span> <span class="p">=</span> <span class="s">{https://doi.org/10.48550/arXiv.2304.05429}</span><span class="p">,</span>
+  <span class="na">doi</span> <span class="p">=</span> <span class="s">{2304.05429}</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure>
+          </div>
         </div>
       </div>
 </li></ol>
@@ -266,7 +263,6 @@
 
     
   <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
-  <script async src="https://badge.dimensions.ai/badge.js"></script>
 
     <!-- MathJax -->
   <script type="text/javascript">
