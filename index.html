@@ -80,18 +80,7 @@
                 <a class="nav-link" href="/publications/">publications</a>
               </li>
               <li class="nav-item ">
-                <a class="nav-link" href="/projects/">projects</a>
-              </li>
-              <li class="nav-item ">
                 <a class="nav-link" href="/cv/">cv</a>
-              </li>
-              <li class="nav-item dropdown ">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">submenus</a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="/publications/">publications</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="/projects/">projects</a>
-                </div>
               </li>
 
               <!-- Toogle theme mode -->
@@ -170,7 +159,57 @@
           <!-- Selected papers -->
           <h2><a href="/publications/" style="color: inherit;">selected publications</a></h2>
           <div class="publications">
-            <ol class="bibliography"></ol>
+            <ol class="bibliography"><li>
+<!-- _layouts/bib.html -->
+      <div class="row">
+        <div class="col-sm-2 abbr"></div>
+
+        <!-- Entry bib key -->
+        <div id="Bekker2023OptimizationSpaces" class="col-sm-8">
+        <!-- Title -->
+        <div class="title">Optimization hierarchies for distance-avoiding sets in compact spaces</div>
+        <!-- Author -->
+        <div class="author">
+        
+
+        Bram Bekker, Olga Kuryatnikova, Fernando Mário De Oliveira Filho, and
+          <span class="more-authors" title="click to view 1 more author" onclick="
+                var element = $(this);
+                element.attr('title', '');
+                var more_authors_text = element.text() == '1 more author' ? 'Juan C Vera' : '1 more author';
+                var cursorPosition = 0;
+                var textAdder = setInterval(function(){
+                  element.text(more_authors_text.substring(0, cursorPosition + 1));
+                  if (++cursorPosition == more_authors_text.length){
+                    clearInterval(textAdder);
+                  }
+              }, '10');
+              ">1 more author</span>
+</div>
+
+        <!-- Journal/Book title and date -->
+        
+        
+        <div class="periodical">
+          2023
+        </div>
+        <div class="periodical">
+          
+        </div>
+
+          <!-- Links/Buttons -->
+          <div class="links">
+          </div>
+          
+          <div class="badges">
+            <span class="altmetric-embed" data-hide-no-mentions="true" data-hide-less-than="15" data-badge-type="2" data-badge-popover="right" data-doi="2304.05429"></span>
+              <span class="__dimensions_badge_embed__" data-doi="2304.05429" data-hide-zero-citations="true" data-style="small_rectangle" data-legend="hover-right" style="margin-bottom: 3px;"></span>
+          </div>
+
+          
+        </div>
+      </div>
+</li></ol>
           </div>
 
 
