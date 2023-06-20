@@ -9,7 +9,7 @@ profile:
   image: LogoGlad.png
   image_circular: true # crops the image to make it circular
   address: >
-    <p>555 HB 04.240</p>
+    <p>HB 04.240</p>
     <p>Mekelweg 4</p>
     <p>Delft, the Netherlands</p>
 
