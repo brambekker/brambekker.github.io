@@ -6,7 +6,7 @@ subtitle:
 
 profile:
   align: right
-  image: LogoGlad.png
+  image: fotoplu.jpg
   image_circular: true # crops the image to make it circular
   address: >
     <p>HB 04.240</p>
