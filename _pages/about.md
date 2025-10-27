@@ -6,8 +6,8 @@ subtitle:
 
 profile:
   align: right
-  image: LogoGlad.png
-  image_circular: true # crops the image to make it circular
+  image: fotoplu.jpg
+  image_circular: false # crops the image to make it circular
   address: >
     <p>HB 04.240</p>
     <p>Mekelweg 4</p>
