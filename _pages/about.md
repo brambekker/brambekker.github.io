@@ -6,7 +6,7 @@ subtitle:
 
 profile:
   align: right
-  image: fotoplu.jpg
+  image: pasfoto.jpg
   image_circular: false # crops the image to make it circular
   address: >
     <p>HB 04.240</p>
