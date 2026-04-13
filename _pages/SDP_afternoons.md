@@ -5,8 +5,6 @@ permalink: /sdp-community-events/
 description: Schedule and other information for the SDP community get-togethers
 nav: false
 horizontal: false
-toc: false
-navbar: false
 ---
 
 
