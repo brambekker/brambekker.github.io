@@ -10,7 +10,7 @@
   </head>
 
   <!-- Body -->
-  <body>
+  <body class="{% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}">
 
     <!-- Header -->
     {%- include header.html %}
