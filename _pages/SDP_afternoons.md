@@ -1,6 +1,6 @@
 ---
 layout: page
-title: SDP afternoons
+title: SDP's Afternoon
 permalink: /sdp-community/
 description: Schedule and other information for the SDP community get-togethers
 nav: false
