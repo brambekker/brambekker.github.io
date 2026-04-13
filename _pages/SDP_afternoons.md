@@ -1,5 +1,5 @@
 ---
-layout: none-plus
+layout: default
 title: SDP Afternoon
 permalink: /sdp-community-events/
 description: Schedule and other information for the SDP community get-togethers
