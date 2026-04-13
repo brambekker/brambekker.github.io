@@ -1,9 +1,8 @@
 ---
-layout: default
+layout: page_no-navbar
 title: SDP Afternoon
 permalink: /sdp-community-events/
 description: Schedule and other information for the SDP community get-togethers
-nav: false
 horizontal: false
 ---
 
