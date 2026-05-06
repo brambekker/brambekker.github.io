@@ -6,7 +6,6 @@ description: Information for the SDP community get-togethers
 horizontal: false
 ---
 
-<title>Community Events</title>
 <style>
     body {
         font-family: Arial, sans-serif;
@@ -79,8 +78,6 @@ horizontal: false
         color: #555;
     }
 </style>
-</head>
-<body>
 
 <div class="container">
     <h1>SDP Afternoons</h1>
@@ -106,6 +103,3 @@ horizontal: false
         </tbody>
     </table>
 </div>
-
-</body>
-</html>
