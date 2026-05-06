@@ -83,7 +83,7 @@ horizontal: false
 <body>
 
 <div class="container">
-    <h1>Community Learning Series</h1>
+    <h1>SDP Afternoons</h1>
 
     <table>
         <thead>
