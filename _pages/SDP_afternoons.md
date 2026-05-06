@@ -1,8 +1,8 @@
 ---
 layout: page_no-navbar
-title: Community events for the Dutch SDP Community
+title: Events of the Dutch SDP community
 permalink: /sdp-community-events/
-description: Information for the SDP community get-togethers
+description: 
 horizontal: false
 ---
 
