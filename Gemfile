@@ -19,6 +19,7 @@ group :jekyll_plugins do
     gem 'unicode_utils'
     gem 'webrick'
     gem 'ostruct'
+    gem 'wdm', '>= 0.1.0'
 end
 group :other_plugins do
     gem 'feedjira'
