@@ -5,6 +5,7 @@
 # Abstracts are Markdown, and LaTeX works the same as elsewhere on the site:
 # $$x^\top A x$$ within a sentence, or $$...$$ on its own line for display math.
 # Use `abstract: |` and indent the text to write several paragraphs.
+# Add new entries at the top to ensure reverse chronological order.
 
 
 - date: October 16 2026
