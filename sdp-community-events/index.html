@@ -68,22 +68,144 @@
           <article>
             <h2 id="sdp-afternoons">SDP Afternoons</h2>
 
-<table>
+<!-- Edit the events, talk titles and abstracts in _data/sdp_afternoons.yml -->
+<style>
+  .sdp-events { width: 100%; border-collapse: collapse; margin: 1rem 0 2rem; font-size: 0.95rem; }
+  .sdp-events th {
+    text-align: left; font-weight: 600; font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--global-text-color-light); padding: 0 1rem 0.6rem 0; border-bottom: 2px solid var(--global-theme-color);
+  }
+  .sdp-events td { vertical-align: top; padding: 1.1rem 1rem 1.1rem 0; border-bottom: 1px solid var(--global-divider-color); }
+  .sdp-events .sdp-date { font-weight: 600; white-space: nowrap; }
+  .sdp-events .sdp-muted { color: var(--global-text-color-light); font-size: 0.88rem; }
+  .sdp-events .sdp-when, .sdp-events .sdp-where { width: 1%; white-space: nowrap; }
+
+  .sdp-talk + .sdp-talk { margin-top: 0.9rem; padding-top: 0.9rem; border-top: 1px dashed var(--global-divider-color); }
+  .sdp-talk-speaker { font-weight: 600; }
+  .sdp-talk-time { font-variant-numeric: tabular-nums; margin-right: 0.35rem; }
+  .sdp-talk-title { display: block; margin-top: 0.15rem; font-style: italic; line-height: 1.4; }
+  .sdp-talk-title.sdp-tba { font-style: normal; color: var(--global-text-color-light); font-size: 0.88rem; }
+
+  .sdp-talk details { margin-top: 0.4rem; }
+  .sdp-talk summary {
+    display: inline-flex; align-items: center; gap: 0.35rem; cursor: pointer; list-style: none; user-select: none;
+    font-size: 0.8rem; font-weight: 600; color: var(--global-theme-color);
+    border: 1px solid var(--global-theme-color); border-radius: 999px; padding: 0.1rem 0.7rem;
+    transition: background-color 0.15s, color 0.15s;
+  }
+  .sdp-talk summary::-webkit-details-marker { display: none; }
+  .sdp-talk summary::before { content: "▸"; transition: transform 0.15s; }
+  .sdp-talk details[open] summary::before { transform: rotate(90deg); }
+  .sdp-talk summary:hover, .sdp-talk details[open] summary {
+    background: var(--global-theme-color); color: var(--global-hover-text-color);
+  }
+  .sdp-talk summary:focus-visible { outline: 2px solid var(--global-theme-color); outline-offset: 2px; }
+  .sdp-abstract {
+    margin-top: 0.6rem; padding: 0.7rem 0.9rem; font-size: 0.9rem; line-height: 1.55; text-align: justify;
+    background: var(--global-code-bg-color); border-left: 3px solid var(--global-theme-color); border-radius: 0 4px 4px 0;
+  }
+  .sdp-abstract p:first-child { margin-top: 0; }
+  .sdp-abstract p:last-child { margin-bottom: 0; }
+
+  @media (max-width: 640px) {
+    .sdp-events thead { display: none; }
+    .sdp-events, .sdp-events tbody, .sdp-events tr, .sdp-events td { display: block; width: 100%; }
+    .sdp-events tr { border-bottom: 1px solid var(--global-divider-color); padding: 1rem 0; }
+    .sdp-events td { border: 0; padding: 0.2rem 0; white-space: normal; }
+    .sdp-events .sdp-talks { padding-top: 0.7rem; }
+  }
+</style>
+
+<table class="sdp-events">
   <thead>
     <tr>
-      <th>Date</th>
-      <th>Location</th>
-      <th>Speakers</th>
-    </tr>
+<th>Date</th>
+<th>Location</th>
+<th>Program</th>
+</tr>
   </thead>
   <tbody>
+    
     <tr>
-      <td>June 22nd 2026   <br> 13:00 – 16:30  </td>
-      <td>
-<a href="https://esviewer.tudelft.nl/space/24/" rel="external nofollow noopener" target="_blank">Lecture hall A</a>   <br> <a href="https://www.google.com/maps/place/Gebouw+23+CiTG/@51.9986022,4.3749267,163m/data=!3m1!1e3!4m15!1m8!3m7!1s0x47c5b53346c081df:0x2e04167e212eca5!2sStevinweg+1,+2628+CN+Delft!3b1!8m2!3d51.9989427!4d4.3761059!16s%2Fg%2F11wxvn42ds!3m5!1s0x47c5b5abf1268929:0x73e1a83a2da59a75!8m2!3d51.998679!4d4.3757508!16s%2Fg%2F11j7kb3nvl?entry=ttu&amp;g_ep=EgoyMDI2MDYxMC4wIKXMDSoASAFQAw%3D%3D" rel="external nofollow noopener" target="_blank">Building 23, Stevinweg 1, Delft</a>  </td>
-      <td>
-<a href="https://diamhomes.ewi.tudelft.nl/~fmario/" rel="external nofollow noopener" target="_blank">Fernando Mário de Oliveira Filho</a>   <br> <a href="https://homepages.cwi.nl/~monique/" rel="external nofollow noopener" target="_blank">Monique Laurent</a>  </td>
+      <td class="sdp-when">
+        <div class="sdp-date">October 16 2026</div>
+        <div class="sdp-muted">13:00 – 16:30</div>
+      </td>
+      <td class="sdp-where">
+        <div><a href="https://www.tilburguniversity.edu/nl/contact/campusplattegrond-en-gebouwen/cube" rel="external nofollow noopener" target="_blank">CUBE 21</a></div>
+        <div class="sdp-muted"><a href="https://www.google.com/maps/place/CUBE/@51.5649761,5.0415569,444m/data=!3m3!1e3!4b1!5s0x47c6be088279b6f1:0x2d0833006926d00f!4m6!3m5!1s0x47c6bfb3c3f776c3:0xc9c607b67b60a737!8m2!3d51.5649728!4d5.0441318!16s%2Fg%2F11g4cl890f?entry=ttu&amp;g_ep=EgoyMDI2MTAwNy4wIKXMDSoASAFQAw%3D%3D" rel="external nofollow noopener" target="_blank">CUBE, Warandelaan 2, Tilburg</a></div>
+      </td>
+      <td class="sdp-talks">
+        
+        <div class="sdp-talk">
+          
+          <span class="sdp-talk-speaker"><a href="https://www.tilburguniversity.edu/staff/j-c-veralizcano" rel="external nofollow noopener" target="_blank">Juan C. Vera</a></span>
+          
+          <span class="sdp-talk-title">Degree Bounds for Polynomial Optimization Hierarchies: A Lagrangian Reformulation Approach</span>
+          
+          
+          <details>
+            <summary>Abstract</summary>
+            <div class="sdp-abstract">
+<p>Drawing upon strong duality results for non-convex problems, we recast polynomial optimization problems (POPs) over general compact semialgebraic sets into equivalent POPs over the hypercube. This approach extends established results for POPs over the hypercube to a broader class of POPs over compact semialgebraic sets. In particular, the analysis focuses on degree bounds for several sum-of-squares (SOS) hierarchies.</p>
+
+<p>This talk is based on the works <a href="https://arxiv.org/abs/2410.24111" rel="external nofollow noopener" target="_blank">arXiv 2410.24111</a> and <a href="https://arxiv.org/abs/2605.15821" rel="external nofollow noopener" target="_blank">arXiv 2605.15821</a></p>
+</div>
+          </details>
+          
+        </div>
+        
+        <div class="sdp-talk">
+          
+          <span class="sdp-talk-speaker"><a href="https://www.lucasslot.com" rel="external nofollow noopener" target="_blank">Lucas Slot</a></span>
+          
+          <span class="sdp-talk-title">P-sätze and Prompts</span>
+          
+          
+          <details>
+            <summary>Abstract</summary>
+            <div class="sdp-abstract">
+<p>A substantial literature is devoted to proving error bounds for the moment-SOS hierarchy (or, equivalently, degree bounds for various Positivstellensätze). Recently, optimal bounds were obtained in two or three of the most studied settings by various (groups of) people prompting various AI models. These improve upon the state-of-the-art by a lot, and essentially close a line of research going back about two decades. I talk about an experimental, ongoing collaboration aimed at collecting these results and making their proofs accessible to human readers.</p>
+</div>
+          </details>
+          
+        </div>
+        
+      </td>
     </tr>
+    
+    <tr>
+      <td class="sdp-when">
+        <div class="sdp-date">June 22 2026</div>
+        <div class="sdp-muted">13:00 – 16:30</div>
+      </td>
+      <td class="sdp-where">
+        <div><a href="https://esviewer.tudelft.nl/space/24/" rel="external nofollow noopener" target="_blank">Lecture hall A</a></div>
+        <div class="sdp-muted"><a href="https://www.google.com/maps/place/Gebouw+23+CiTG/@51.9986022,4.3749267,163m/data=!3m1!1e3!4m15!1m8!3m7!1s0x47c5b53346c081df:0x2e04167e212eca5!2sStevinweg+1,+2628+CN+Delft!3b1!8m2!3d51.9989427!4d4.3761059!16s%2Fg%2F11wxvn42ds!3m5!1s0x47c5b5abf1268929:0x73e1a83a2da59a75!8m2!3d51.998679!4d4.3757508!16s%2Fg%2F11j7kb3nvl?entry=ttu&amp;g_ep=EgoyMDI2MDYxMC4wIKXMDSoASAFQAw%3D%3D" rel="external nofollow noopener" target="_blank">Building 23, Stevinweg 1, Delft</a></div>
+      </td>
+      <td class="sdp-talks">
+        
+        <div class="sdp-talk">
+          
+          <span class="sdp-talk-speaker"><a href="https://diamhomes.ewi.tudelft.nl/~fmario/" rel="external nofollow noopener" target="_blank">Fernando Mário de Oliveira Filho</a></span>
+          
+          <span class="sdp-talk-title sdp-tba">Title to be announced</span>
+          
+          
+        </div>
+        
+        <div class="sdp-talk">
+          
+          <span class="sdp-talk-speaker"><a href="https://homepages.cwi.nl/~monique/" rel="external nofollow noopener" target="_blank">Monique Laurent</a></span>
+          
+          <span class="sdp-talk-title sdp-tba">Title to be announced</span>
+          
+          
+        </div>
+        
+      </td>
+    </tr>
+    
   </tbody>
 </table>
 
