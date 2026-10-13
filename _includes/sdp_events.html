@@ -1,0 +1,85 @@
+<style>
+  .sdp-events { width: 100%; border-collapse: collapse; margin: 1rem 0 2rem; font-size: 0.95rem; }
+  .sdp-events th {
+    text-align: left; font-weight: 600; font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--global-text-color-light); padding: 0 1rem 0.6rem 0; border-bottom: 2px solid var(--global-theme-color);
+  }
+  .sdp-events td { vertical-align: top; padding: 1.1rem 1rem 1.1rem 0; border-bottom: 1px solid var(--global-divider-color); }
+  .sdp-events .sdp-date { font-weight: 600; white-space: nowrap; }
+  .sdp-events .sdp-muted { color: var(--global-text-color-light); font-size: 0.88rem; }
+  .sdp-events .sdp-when, .sdp-events .sdp-where { width: 1%; white-space: nowrap; }
+
+  .sdp-talk + .sdp-talk { margin-top: 0.9rem; padding-top: 0.9rem; border-top: 1px dashed var(--global-divider-color); }
+  .sdp-talk-speaker { font-weight: 600; }
+  .sdp-talk-time { font-variant-numeric: tabular-nums; margin-right: 0.35rem; }
+  .sdp-talk-title { display: block; margin-top: 0.15rem; font-style: italic; line-height: 1.4; }
+  .sdp-talk-title.sdp-tba { font-style: normal; color: var(--global-text-color-light); font-size: 0.88rem; }
+
+  .sdp-talk details { margin-top: 0.4rem; }
+  .sdp-talk summary {
+    display: inline-flex; align-items: center; gap: 0.35rem; cursor: pointer; list-style: none; user-select: none;
+    font-size: 0.8rem; font-weight: 600; color: var(--global-theme-color);
+    border: 1px solid var(--global-theme-color); border-radius: 999px; padding: 0.1rem 0.7rem;
+    transition: background-color 0.15s, color 0.15s;
+  }
+  .sdp-talk summary::-webkit-details-marker { display: none; }
+  .sdp-talk summary::before { content: "▸"; transition: transform 0.15s; }
+  .sdp-talk details[open] summary::before { transform: rotate(90deg); }
+  .sdp-talk summary:hover, .sdp-talk details[open] summary {
+    background: var(--global-theme-color); color: var(--global-hover-text-color);
+  }
+  .sdp-talk summary:focus-visible { outline: 2px solid var(--global-theme-color); outline-offset: 2px; }
+  .sdp-abstract {
+    margin-top: 0.6rem; padding: 0.7rem 0.9rem; font-size: 0.9rem; line-height: 1.55; text-align: justify;
+    background: var(--global-code-bg-color); border-left: 3px solid var(--global-theme-color); border-radius: 0 4px 4px 0;
+  }
+  .sdp-abstract p:first-child { margin-top: 0; }
+  .sdp-abstract p:last-child { margin-bottom: 0; }
+
+  @media (max-width: 640px) {
+    .sdp-events thead { display: none; }
+    .sdp-events, .sdp-events tbody, .sdp-events tr, .sdp-events td { display: block; width: 100%; }
+    .sdp-events tr { border-bottom: 1px solid var(--global-divider-color); padding: 1rem 0; }
+    .sdp-events td { border: 0; padding: 0.2rem 0; white-space: normal; }
+    .sdp-events .sdp-talks { padding-top: 0.7rem; }
+  }
+</style>
+
+<table class="sdp-events">
+  <thead>
+    <tr><th>Date</th><th>Location</th><th>Program</th></tr>
+  </thead>
+  <tbody>
+    {% for event in include.events %}
+    <tr>
+      <td class="sdp-when">
+        <div class="sdp-date">{{ event.date }}</div>
+        {% if event.time %}<div class="sdp-muted">{{ event.time }}</div>{% endif %}
+      </td>
+      <td class="sdp-where">
+        {% if event.room %}<div>{% if event.room_url %}<a href="{{ event.room_url }}">{{ event.room }}</a>{% else %}{{ event.room }}{% endif %}</div>{% endif %}
+        {% if event.address %}<div class="sdp-muted">{% if event.address_url %}<a href="{{ event.address_url }}">{{ event.address }}</a>{% else %}{{ event.address }}{% endif %}</div>{% endif %}
+      </td>
+      <td class="sdp-talks">
+        {% for talk in event.talks %}
+        <div class="sdp-talk">
+          {% if talk.time %}<span class="sdp-talk-time sdp-muted">{{ talk.time }}</span>{% endif %}
+          <span class="sdp-talk-speaker">{% if talk.url %}<a href="{{ talk.url }}">{{ talk.speaker }}</a>{% else %}{{ talk.speaker }}{% endif %}</span>
+          {% if talk.title and talk.title != "" %}
+          <span class="sdp-talk-title">{{ talk.title }}</span>
+          {% else %}
+          <span class="sdp-talk-title sdp-tba">Title to be announced</span>
+          {% endif %}
+          {% if talk.abstract and talk.abstract != "" %}
+          <details>
+            <summary>Abstract</summary>
+            <div class="sdp-abstract">{{ talk.abstract | markdownify }}</div>
+          </details>
+          {% endif %}
+        </div>
+        {% endfor %}
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
