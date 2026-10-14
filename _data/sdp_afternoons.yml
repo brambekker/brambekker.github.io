@@ -1,4 +1,4 @@
-# SDP Afternoons — one entry per event, newest at the bottom.
+# SDP Afternoons — one entry per event, newest at the top.
 #
 # Per talk, only `speaker` is required. Leave `title` or `abstract` out
 # (or empty) and the page shows "Title to be announced" / no abstract button.
@@ -9,7 +9,7 @@
 
 
 - date: October 16 2026
-  time: 13:00 – 17:00
+  time: 13:00 – 16:30
   room: CUBE 21
   room_url: https://www.tilburguniversity.edu/nl/contact/campusplattegrond-en-gebouwen/cube
   address: CUBE, Warandelaan 2, Tilburg
