@@ -266,8 +266,8 @@ display_tags: ["formatting", "images", "links", "math", "code"] # these tags wil
 # -----------------------------------------------------------------------------
 
 scholar:
-  last_name: [Einstein]
-  first_name: [Albert, A.]
+  last_name: [Bekker]
+  first_name: [Bram, B.]
 
   style: apa
   locale: en
@@ -279,6 +279,9 @@ scholar:
   # preprocessing may conflict with MathJAX if the latter is enabled.
   # See https://github.com/alshedivat/al-folio/issues/357.
   bibtex_filters: [latex, smallcaps, superscript]
+
+  sort_by: year,month
+  order: descending,descending
 
   replace_strings: true
   join_strings: true
