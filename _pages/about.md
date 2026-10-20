@@ -17,7 +17,7 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-Since April 2026, I am a post-doc in the group of Prof. dr. Frank Vallentin at the University of Cologne. My research interests are on the interplay between functional and harmonic analysis, and optimization in geometry.
+Since April 2026, I am a post-doc in the group of Frank Vallentin at the University of Cologne. My research interests are on the interplay between functional and harmonic analysis, and optimization in geometry.
 
 Previously, I was a PhD candidate at the [Discrete Mathematics and Optimization group](https://www.tudelft.nl/ewi/over-de-faculteit/afdelingen/applied-mathematics/discrete-mathematics-optimization) at TU Delft in the Netherlands. I obtained a bachelor's degree in physics and a bachelor's and master's degree in mathematics at [Radboud University](https://www.ru.nl/en), Nijmegen.
 
