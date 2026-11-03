@@ -23,8 +23,8 @@ jobs:
     - name: Setup Ruby
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: '3.2.1'
-        bundler-cache: true
+       ruby-version: "3.2"   # was 3.2.1
+       bundler-cache: true
     - name: Install and Build 🔧
       run: |
         npm install -g mermaid.cli
@@ -34,4 +34,6 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@v4
       with:
         folder: _site
+
+        
 
