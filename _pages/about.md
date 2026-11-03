@@ -9,7 +9,8 @@ profile:
   image: pasfoto.jpg
   image_circular: false # crops the image to make it circular
   address:
-    <p>Sibille-Hartmann-Str. 2-8 (6th floor)</p>
+    <p>Sibille-Hartmann-Str. 2-8 </p>
+    <p>6th floor, office 116</p>
     <p>Cologne, Germany</p>
 news: false  # includes a list of news items
 latest_posts: false  # includes a list of the newest posts
